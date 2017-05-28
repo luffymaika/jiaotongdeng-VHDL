@@ -1,0 +1,130 @@
+|top
+clk => test1:HELLO.clk_in
+clk => pre_state[0].CLK
+clk => pre_state[1].CLK
+clk => test2:HELLo2.clk_in2
+key1 => comb.IN1
+key1 => key_out.IN1
+key1 => comb.IN1
+key2 => ~NO_FANOUT~
+key3 => ~NO_FANOUT~
+key4 => ~NO_FANOUT~
+key5 => ~NO_FANOUT~
+seg7data[0] <= xianshi:dis.leddata[0]
+seg7data[1] <= xianshi:dis.leddata[1]
+seg7data[2] <= xianshi:dis.leddata[2]
+seg7data[3] <= xianshi:dis.leddata[3]
+seg7data[4] <= xianshi:dis.leddata[4]
+seg7data[5] <= xianshi:dis.leddata[5]
+seg7data[6] <= xianshi:dis.leddata[6]
+seg7data[7] <= xianshi:dis.leddata[7]
+seg7com[0] <= xianshi:dis.ledcom[0]
+seg7com[1] <= xianshi:dis.ledcom[1]
+seg7com[2] <= xianshi:dis.ledcom[2]
+seg7com[3] <= xianshi:dis.ledcom[3]
+
+
+|top|test1:HELLO
+clk_in => flag.CLK
+clk_in => count1[0].CLK
+clk_in => count1[1].CLK
+clk_in => count1[2].CLK
+clk_in => count1[3].CLK
+clk_in => count1[4].CLK
+clk_in => count1[5].CLK
+clk_in => count1[6].CLK
+clk_in => count1[7].CLK
+clk_in => count1[8].CLK
+clk_in => count1[9].CLK
+clk_in => count1[10].CLK
+clk_in => count1[11].CLK
+clk_in => count1[12].CLK
+clk_in => count1[13].CLK
+clk_in => count1[14].CLK
+clk_in => count1[15].CLK
+clk_in => count1[16].CLK
+clk_in => count1[17].CLK
+clk_in => count1[18].CLK
+clk_in => count1[19].CLK
+clk_in => count1[20].CLK
+clk_in => count1[21].CLK
+clk_in => count1[22].CLK
+clk_out <= flag.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|test2:HELLo2
+clk_in2 => flag.CLK
+clk_in2 => count1[0].CLK
+clk_in2 => count1[1].CLK
+clk_in2 => count1[2].CLK
+clk_in2 => count1[3].CLK
+clk_in2 => count1[4].CLK
+clk_in2 => count1[5].CLK
+clk_in2 => count1[6].CLK
+clk_in2 => count1[7].CLK
+clk_in2 => count1[8].CLK
+clk_in2 => count1[9].CLK
+clk_in2 => count1[10].CLK
+clk_in2 => count1[11].CLK
+clk_in2 => count1[12].CLK
+clk_in2 => count1[13].CLK
+clk_in2 => count1[14].CLK
+clk_in2 => count1[15].CLK
+clk_out2 <= flag.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|xianshi:dis
+clk1 => leddata[0]~reg0.CLK
+clk1 => leddata[1]~reg0.CLK
+clk1 => leddata[2]~reg0.CLK
+clk1 => leddata[3]~reg0.CLK
+clk1 => leddata[4]~reg0.CLK
+clk1 => leddata[5]~reg0.CLK
+clk1 => leddata[6]~reg0.CLK
+clk1 => leddata[7]~reg0.CLK
+clk1 => ledcom[0]~reg0.CLK
+clk1 => ledcom[1]~reg0.CLK
+clk1 => ledcom[2]~reg0.CLK
+clk1 => ledcom[3]~reg0.CLK
+clk1 => duan[0].CLK
+clk1 => duan[1].CLK
+num[0] => Div1.IN10
+num[0] => Mod1.IN13
+num[1] => Div1.IN9
+num[1] => Mod1.IN12
+num[2] => Div1.IN8
+num[2] => Mod1.IN11
+num[3] => Div1.IN7
+num[3] => Mod1.IN10
+num[4] => Div1.IN6
+num[4] => Mod1.IN9
+num[5] => Div1.IN5
+num[5] => Mod1.IN8
+num[6] => Div1.IN4
+num[6] => Mod1.IN7
+light[0] => Div0.IN9
+light[0] => Mod0.IN11
+light[1] => Div0.IN8
+light[1] => Mod0.IN10
+light[2] => Div0.IN7
+light[2] => Mod0.IN9
+light[3] => Div0.IN6
+light[3] => Mod0.IN8
+light[4] => Div0.IN5
+light[4] => Mod0.IN7
+light[5] => Div0.IN4
+light[5] => Mod0.IN6
+ledcom[0] <= ledcom[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ledcom[1] <= ledcom[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ledcom[2] <= ledcom[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ledcom[3] <= ledcom[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+leddata[0] <= leddata[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+leddata[1] <= leddata[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+leddata[2] <= leddata[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+leddata[3] <= leddata[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+leddata[4] <= leddata[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+leddata[5] <= leddata[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+leddata[6] <= leddata[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+leddata[7] <= leddata[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

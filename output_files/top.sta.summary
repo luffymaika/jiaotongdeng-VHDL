@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'test2:HELLo2|flag'
+Slack : -11.300
+TNS   : -80.798
+
+Type  : Slow Model Setup 'clk'
+Slack : -3.895
+TNS   : -113.069
+
+Type  : Slow Model Setup 'test1:HELLO|flag'
+Slack : -2.537
+TNS   : -33.288
+
+Type  : Slow Model Hold 'clk'
+Slack : -2.553
+TNS   : -5.101
+
+Type  : Slow Model Hold 'test1:HELLO|flag'
+Slack : 0.125
+TNS   : 0.000
+
+Type  : Slow Model Hold 'test2:HELLo2|flag'
+Slack : 0.499
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clk'
+Slack : -1.941
+TNS   : -62.785
+
+Type  : Slow Model Minimum Pulse Width 'test1:HELLO|flag'
+Slack : -0.742
+TNS   : -35.616
+
+Type  : Slow Model Minimum Pulse Width 'test2:HELLo2|flag'
+Slack : -0.742
+TNS   : -19.292
+
+Type  : Fast Model Setup 'test2:HELLo2|flag'
+Slack : -2.848
+TNS   : -19.883
+
+Type  : Fast Model Setup 'clk'
+Slack : -0.714
+TNS   : -10.902
+
+Type  : Fast Model Setup 'test1:HELLO|flag'
+Slack : -0.106
+TNS   : -0.521
+
+Type  : Fast Model Hold 'clk'
+Slack : -1.357
+TNS   : -2.710
+
+Type  : Fast Model Hold 'test1:HELLO|flag'
+Slack : 0.210
+TNS   : 0.000
+
+Type  : Fast Model Hold 'test2:HELLo2|flag'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -42.380
+
+Type  : Fast Model Minimum Pulse Width 'test1:HELLO|flag'
+Slack : -0.500
+TNS   : -24.000
+
+Type  : Fast Model Minimum Pulse Width 'test2:HELLo2|flag'
+Slack : -0.500
+TNS   : -13.000
+
+------------------------------------------------------------

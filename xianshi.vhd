@@ -1,0 +1,67 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY xianshi IS 
+	PORT(
+		clk1: IN STD_LOGIC;
+		num: IN INTEGER RANGE 99 DOWNTO 0; 
+		light: IN INTEGER RANGE 50 DOWNTO 0;
+		ledcom: OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+		leddata:OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+	);
+END xianshi;
+
+ARCHITECTURE example OF xianshi IS
+SIGNAL duan:INTEGER RANGE 0 TO 3:=0;
+
+BEGIN
+
+ PROCESS(clk1)
+ VARIABLE data:INTEGER RANGE 0 TO 9:=0;
+VARIABLE show: STD_LOGIC_VECTOR(7 DOWNTO 0);
+VARIABLE com : STD_LOGIC_VECTOR(3 DOWNTO 0);
+ BEGIN
+	if(clk1'event and clk1='1')then
+		if(duan /= 3)then                    ------选择段地址----------
+			duan <= duan + 1 ;
+		else
+			duan <= 0;
+		end if;
+		
+		case duan is
+			when 0=>com:="1110";
+			--	  data <= light/10;       ---------得到要显示的数字-----------
+			when 1=>com:="1101";
+			--	  data<= light rem 10;
+			when 2=>com:="1011";
+			--	  data<= num /10;
+			when 3=>com:="0111";
+			--	  data<= num rem 10;
+		end case;
+		
+		case com is
+			when "1110"=>data:= light/10;
+			when "1101"=>data:=light rem 10;
+			when "1011"=>data:=num/10;
+			when "0111"=>data:=num rem 10;
+			when others =>data:=0;
+		end case;
+	
+		case data is
+			when 0 => show := "11000000"; -- 0
+			when 1 => show := "11111001"; -- 1
+			when 2 => show := "10100100"; -- 2
+			when 3 => show := "10110000"; -- 3
+			when 4 => show := "10011001"; -- 4
+			when 5 => show := "10010010"; -- 5
+			when 6 => show := "10000010"; -- 6				
+			when 7 => show := "11111000"; -- 7
+			when 8 => show := "10000000"; -- 8
+			when 9 => show := "10010000"; -- 9
+		end case;
+		ledcom <= com;
+		leddata<= show;
+	end if;
+
+END PROCESS;
+END ARCHITECTURE example;

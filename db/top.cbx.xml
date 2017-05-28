@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="top">
+		<CBX_INST_ENTRY INSTANCE_NAME="|top|xianshi:dis|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_vcm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top|xianshi:dis|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_0dm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top|xianshi:dis|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_45m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top|xianshi:dis|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_65m.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
